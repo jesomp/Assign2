@@ -5,7 +5,7 @@ namespace Assign2
     public class EncryptDecrypt
     {
         private const string letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        private int length;
+        private readonly int length;
         private int stringIndex;
         private int rand;
 
