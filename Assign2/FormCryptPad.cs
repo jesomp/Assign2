@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
@@ -24,7 +19,7 @@ namespace Assign2
         private int newPosition;
 
         EncryptDecrypt ed;
-        readonly FormFind ff;
+        private readonly FormFind ff;
 
         public FormCryptPad()
         {
@@ -223,8 +218,8 @@ namespace Assign2
             string inputError3;
 
             inputError = "Invalid Input!";
-            inputError2 = "Encryption Key must be Unsigned Integer";
-            inputError3 = "Main Textbox must have text to encrypt";
+            inputError2 = "\nEncryption Key must be Unsigned Integer";
+            inputError3 = "\nMain Textbox must have text to encrypt";
             MessageBox.Show(inputError + "\n" + inputError2 + "\n" + inputError3, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using NUnit.Framework;
 
 namespace Assign2
@@ -15,7 +11,7 @@ namespace Assign2
         private const uint LAG = (START - TRAIL);
         private const uint BITSIZE = 32;
 
-        private uint[] UnsignedIntArray;
+        private readonly uint[] UnsignedIntArray;
         private uint start;
         private uint trail;
 
