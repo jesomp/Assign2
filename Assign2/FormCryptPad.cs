@@ -140,14 +140,13 @@ namespace Assign2
         //button to call encryption method
         private void BtnEncrypt_Click(object sender, EventArgs e)
         {
-            string textToEncrypt;
             string encryptedString = "";
 
             if (!ValidateInput())
                 PrintError();
             else
             {
-                PreEncryptDecrypt(out textToEncrypt);
+                PreEncryptDecrypt(out string textToEncrypt);
 
                 //encrypt each character from the main textbox
                 foreach (char c in textToEncrypt)
@@ -162,14 +161,13 @@ namespace Assign2
         //button to call decryption method
         private void BtnDecrypt_Click(object sender, EventArgs e)
         {
-            string textToDecrypt;
             string decryptedString = "";
 
             if (!ValidateInput())
                 PrintError();
             else
             {
-                PreEncryptDecrypt(out textToDecrypt);
+                PreEncryptDecrypt(out string textToDecrypt);
 
                 //decrypt each character from the main textbox
                 foreach (char c in textToDecrypt)
@@ -203,9 +201,7 @@ namespace Assign2
         {
             if (txtMainTextBox.Text == "" || txtEncryptionKey.Text == "")
                 return false;
-
-            uint encryptionKey;
-            bool wasParseSuccessful = uint.TryParse(txtEncryptionKey.Text, out encryptionKey);
+            bool wasParseSuccessful = uint.TryParse(txtEncryptionKey.Text, out _);
 
             return wasParseSuccessful;
         }
